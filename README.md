@@ -1,2 +1,5 @@
 # CAP6415_F25_project-Finding-and-solving-hard-to-detect-classes-using-synthetic-images
 CAP6415_F25_project-Finding and solving hard-to-detect classes using synthetic images
+Abstract
+
+State-of-the-art (SOTA) computer vision models, despite their high performance, continue to exhibit weaknesses on specific object classes, especially those with limited representation, high variability, fine-grained differences, or unusual visual properties. This project aims to identify such “hard-to-detect” classes in a chosen SOTA model and improve model performance through targeted fine-tuning with synthetic images. Synthetic data will be generated using modern generative models or 3D rendering pipelines to enrich underrepresented samples. The effectiveness of the approach will be evaluated through quantitative metrics (e.g., accuracy, F1-score, mAP) before and after fine-tuning. This work demonstrates how synthetic data can strategically strengthen model robustness and address weaknesses in real-world recognition systems.
