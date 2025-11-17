@@ -1,15 +1,4 @@
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.lib.pagesizes import LETTER
-from reportlab.lib.units import inch
 
-file_path = "/mnt/data/research_paper.pdf"
-
-styles = getSampleStyleSheet()
-story = []
-
-text = """
-Improving Detection of Rare COCO Classes Using Synthetic SDXL Images
 
 Abstract:
 Object detection models trained on the COCO dataset struggle with classes that appear infrequently or lack visual diversity. This study presents a synthetic data generation pipeline using Stable Diffusion XL (SDXL) to enhance the detection of rare COCO classes. By identifying low-performing categories, generating realistic synthetic images, and incorporating automatic annotations, we demonstrate significant improvements in per-class Average Precision (AP). Experiments show that targeted synthetic augmentation increases AP for rare classes by 20–40%, validating the potential of diffusion-based data augmentation.
