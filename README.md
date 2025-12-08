@@ -1,9 +1,3 @@
-# CAP6415_F25_project-Finding-and-solving-hard-to-detect-classes-using-synthetic-images
-CAP6415_F25_project-Finding and solving hard-to-detect classes using synthetic images
-
-
-Abstract
-
 # 🚀 Training a Vision Model Using Unity-Generated Synthetic Data
 
 **Improving Under-Represented Classes with Synthetic Book Images**
@@ -271,5 +265,4 @@ Unity-generated images provided the missing texture/pose diversity needed for th
 * `Perception2YOLO` – converter script
 * `SOTA_test.py` / `TRAINING_test.py` – evaluation scripts
 * `Training.ipynb` – training workflow
-
 

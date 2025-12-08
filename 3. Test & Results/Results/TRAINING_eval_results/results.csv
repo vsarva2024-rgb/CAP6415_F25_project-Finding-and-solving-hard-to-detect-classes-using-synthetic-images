@@ -1,0 +1,205 @@
+image,gt_label,pred_label,pred_score,pred_class_id
+real_dataset\book\29WK1N7XZD8R.jpg,book,book,0.9879078269004822,2
+real_dataset\book\2C81C9X4WLC6.jpg,book,laptop,0.7817465662956238,3
+real_dataset\book\3U9T8G0BR9VZ.jpg,book,book,0.9923700094223022,2
+real_dataset\book\3UHRM6KIOA78.jpg,book,book,0.9962831139564514,2
+real_dataset\book\3XWEQMFOBSJ1.jpg,book,book,0.9941323399543762,2
+real_dataset\book\5IH6FGO4SBUN.jpg,book,book,0.9930114150047302,2
+real_dataset\book\6F473G9EGMKQ.jpg,book,laptop,0.9938938021659851,3
+real_dataset\book\A536GYIV0RUF.jpg,book,book,0.9941673278808594,2
+real_dataset\book\B97RWD8LMH5J.jpg,book,book,0.9966282248497009,2
+real_dataset\book\EK932V6QHYEI.jpg,book,book,0.9893847107887268,2
+real_dataset\book\FLLP4I7Q3HLE.jpg,book,book,0.9961058497428894,2
+real_dataset\book\G4R235CHJVFN.jpg,book,chair,0.3853225111961365,4
+real_dataset\book\G802HKKIXKAE.jpg,book,book,0.9809002876281738,2
+real_dataset\book\HTZ5TOMYLPA0.jpg,book,laptop,0.9879626631736755,3
+real_dataset\book\I2PCJWD0BG7S.jpg,book,book,0.9954055547714233,2
+real_dataset\book\IT65XJVSRNFX.jpg,book,book,0.9981131553649902,2
+real_dataset\book\JPZ5SJIZB4Z3.jpg,book,book,0.9875754117965698,2
+real_dataset\book\MKGYEXS5V6F4.jpg,book,book,0.9975270628929138,2
+real_dataset\book\MKS15DP99B5K.jpg,book,book,0.9963105320930481,2
+real_dataset\book\NAIVV6AEVZLP.jpg,book,laptop,0.9954013824462891,3
+real_dataset\book\P074Z1416MIS.jpg,book,bottle,0.9632295370101929,0
+real_dataset\book\S12EY561RJNU.jpg,book,book,0.9762396812438965,2
+real_dataset\book\S6KZU6A85QIS.jpg,book,book,0.9783944487571716,2
+real_dataset\book\screenshot20251127165110.png,book,book,0.9964476823806763,2
+real_dataset\book\screenshot20251127165120.png,book,book,0.9971490502357483,2
+real_dataset\book\screenshot20251127165132.png,book,book,0.990208089351654,2
+real_dataset\book\screenshot20251127165148.png,book,book,0.9900156855583191,2
+real_dataset\book\T1ZNV2Q87I0L.jpg,book,book,0.9979298114776611,2
+real_dataset\book\TCICNE3UT47G.jpg,book,book,0.997378945350647,2
+real_dataset\book\UIJ33G2PTYTJ.jpg,book,book,0.7645615935325623,2
+real_dataset\book\VL0M827QFTV8.jpg,book,book,0.9950836896896362,2
+real_dataset\book\X7U7C26FWH84.jpg,book,book,0.9978398084640503,2
+real_dataset\book\XLN5Y5DMRVQ6.jpg,book,bottle,0.9452680945396423,0
+real_dataset\book\YBVBBYADG2HR.jpg,book,book,0.991100013256073,2
+real_dataset\bottle\01KJW9YP808Z.jpg,bottle,bottle,0.9918391108512878,0
+real_dataset\bottle\05FRVCPGYRC5.jpg,bottle,bottle,0.9808530211448669,0
+real_dataset\bottle\2KJFIPVUTELU.jpg,bottle,bottle,0.9946095943450928,0
+real_dataset\bottle\2L5UJBREVPVF.jpg,bottle,bottle,0.9867784976959229,0
+real_dataset\bottle\3FCVE8M3I1YD.jpg,bottle,bottle,0.9786320924758911,0
+real_dataset\bottle\3Q3GC73MS42X.jpg,bottle,bottle,0.9720064401626587,0
+real_dataset\bottle\5JNBL5TQXS1W.jpg,bottle,bottle,0.9916707277297974,0
+real_dataset\bottle\5UAXOYMOQQQH.jpg,bottle,bottle,0.9854863882064819,0
+real_dataset\bottle\6B29LG14FOWV.jpg,bottle,bottle,0.9746041297912598,0
+real_dataset\bottle\6POGQXJ1N578.jpg,bottle,bottle,0.9872984290122986,0
+real_dataset\bottle\7XY9GEXE2C5H.jpg,bottle,bottle,0.9911529421806335,0
+real_dataset\bottle\7YOD1IJNLFOU.jpg,bottle,bottle,0.9856703877449036,0
+real_dataset\bottle\9RJ2M4G5EC6Z.jpg,bottle,bottle,0.9831726551055908,0
+real_dataset\bottle\9V06T6OCQGXJ.jpg,bottle,bottle,0.9902907013893127,0
+real_dataset\bottle\A99H6E40YYTE.jpg,bottle,bottle,0.9724805951118469,0
+real_dataset\bottle\B0MAC31ZRJWV.jpg,bottle,bottle,0.9753193855285645,0
+real_dataset\bottle\CDKMAIC3H24P.jpg,bottle,book,0.8233579397201538,2
+real_dataset\bottle\CHCI102G8MNJ.jpg,bottle,bottle,0.9330364465713501,0
+real_dataset\bottle\DE0N55LL9TOR.jpg,bottle,bottle,0.9883650541305542,0
+real_dataset\bottle\EZDUBX0PV06Y.jpg,bottle,bottle,0.9859069585800171,0
+real_dataset\bottle\F584E8OZAA4N.jpg,bottle,bottle,0.9838041663169861,0
+real_dataset\bottle\FMT05MJCS8Y5.jpg,bottle,bottle,0.9951230883598328,0
+real_dataset\bottle\FVYR911V34FA.jpg,bottle,bottle,0.9806624054908752,0
+real_dataset\bottle\FWRSMJ2F4N1X.jpg,bottle,bottle,0.9727495908737183,0
+real_dataset\bottle\GEVRXVSDW3WA.jpg,bottle,bottle,0.9839786887168884,0
+real_dataset\bottle\GXTHRWFJZSZ2.jpg,bottle,bottle,0.9885780811309814,0
+real_dataset\bottle\HLO2X6I3IE3I.jpg,bottle,bottle,0.9859626889228821,0
+real_dataset\bottle\IGAU3EGPY3NA.jpg,bottle,bottle,0.9775477647781372,0
+real_dataset\bottle\II58I5YRHRPP.jpg,bottle,bottle,0.9915214776992798,0
+real_dataset\bottle\IKRLPFM54W74.jpg,bottle,bottle,0.9851680994033813,0
+real_dataset\bottle\JADX2U74E6Q5.jpg,bottle,bottle,0.9796212911605835,0
+real_dataset\bottle\KBLBC7W05HPL.jpg,bottle,bottle,0.9906173348426819,0
+real_dataset\bottle\KWSYCNNOZ2FI.jpg,bottle,bottle,0.9844787120819092,0
+real_dataset\bottle\LKJHZXCFX7CR.jpg,bottle,bottle,0.9838603734970093,0
+real_dataset\bottle\LYALS1MS4YH3.jpg,bottle,bottle,0.9946202039718628,0
+real_dataset\bottle\M3OEG84EOSHP.jpg,bottle,bottle,0.9911620616912842,0
+real_dataset\bottle\N32QOR6OFP5A.jpg,bottle,bottle,0.990756094455719,0
+real_dataset\bottle\OTAHTJSD28TK.jpg,bottle,bottle,0.969645619392395,0
+real_dataset\bottle\PCJJELG34ZPW.jpg,bottle,bottle,0.9790306687355042,0
+real_dataset\bottle\Q19U36RGAJGL.jpg,bottle,bottle,0.9955334663391113,0
+real_dataset\bottle\Q20JN2TWK771.jpg,bottle,bottle,0.9797978401184082,0
+real_dataset\bottle\RF5EUCZ3E7RS.jpg,bottle,bottle,0.9892555475234985,0
+real_dataset\bottle\RQFZKRU30Y11.jpg,bottle,bottle,0.9875598549842834,0
+real_dataset\bottle\RTFRBNMWE716.jpg,bottle,bottle,0.9951684474945068,0
+real_dataset\bottle\TE1CMDVWO0H6.jpg,bottle,bottle,0.9940926432609558,0
+real_dataset\bottle\TOYS8CEJHQ4U.jpg,bottle,bottle,0.9769938588142395,0
+real_dataset\bottle\TTU7MYIG8TJ6.jpg,bottle,bottle,0.9836560487747192,0
+real_dataset\bottle\ULP93ZLMDJIM.jpg,bottle,bottle,0.991814136505127,0
+real_dataset\bottle\V27HOO5H7JQK.jpg,bottle,bottle,0.9645382165908813,0
+real_dataset\bottle\VLMG1FQ0ED6T.jpg,bottle,bottle,0.9891558289527893,0
+real_dataset\bottle\Y5YVKMJ0A4MA.jpg,bottle,bottle,0.9869151711463928,0
+real_dataset\bottle\YRYICH8KLOVR.jpg,bottle,bottle,0.9712486863136292,0
+real_dataset\chair\0TVYI0FKFM75.jpg,chair,chair,0.9859731197357178,4
+real_dataset\chair\1D6T7WV6PR5T.jpg,chair,chair,0.9939111471176147,4
+real_dataset\chair\1RXQGRFKBWVL.jpg,chair,chair,0.9873506426811218,4
+real_dataset\chair\29YC0WOHHYU0.jpg,chair,chair,0.9920231103897095,4
+real_dataset\chair\2EZ4GTUVFM17.jpg,chair,chair,0.9888467192649841,4
+real_dataset\chair\6CZ3WL5K0HUG.jpg,chair,chair,0.9902054667472839,4
+real_dataset\chair\6LPZVWVLDJGE.jpg,chair,chair,0.9903000593185425,4
+real_dataset\chair\96SFRPX7B6GL.jpg,chair,chair,0.9956886172294617,4
+real_dataset\chair\A8H5YG9IIFAM.jpg,chair,chair,0.9931697845458984,4
+real_dataset\chair\ALB8CGEF3KIM.jpg,chair,chair,0.9917175769805908,4
+real_dataset\chair\EMPWNKJ1MKB8.jpg,chair,chair,0.9916340112686157,4
+real_dataset\chair\EPRXTFJUPPT0.jpg,chair,chair,0.9961636066436768,4
+real_dataset\chair\F3W6G6EQACDH.jpg,chair,chair,0.9921584129333496,4
+real_dataset\chair\FF9LX9R3EAIK.jpg,chair,chair,0.988680362701416,4
+real_dataset\chair\FYZQA89MUI01.jpg,chair,chair,0.9911647439002991,4
+real_dataset\chair\HM5NGZGUA68Q.jpg,chair,chair,0.9906931519508362,4
+real_dataset\chair\JGLFY3QELFRE.jpg,chair,chair,0.981599748134613,4
+real_dataset\chair\KKGOYJBVIE3F.jpg,chair,chair,0.963090717792511,4
+real_dataset\chair\NNEMGHE122MX.jpg,chair,chair,0.9903318881988525,4
+real_dataset\chair\QSFDFRLMFXO5.jpg,chair,chair,0.9922032356262207,4
+real_dataset\chair\QW61UWV7Y1WC.jpg,chair,chair,0.9942652583122253,4
+real_dataset\chair\TRTRWHWNQHG7.jpg,chair,chair,0.9946829676628113,4
+real_dataset\chair\WANA2FWCK63O.jpg,chair,chair,0.935416579246521,4
+real_dataset\chair\WGZJGBQ7FXXT.jpg,chair,chair,0.9912109971046448,4
+real_dataset\chair\Y7I1EGVOLEN3.jpg,chair,chair,0.9765670895576477,4
+real_dataset\chair\ZHHXQ00W2WP7.jpg,chair,chair,0.990875244140625,4
+real_dataset\chair\ZJ9W3QX7F76J.jpg,chair,chair,0.9956361651420593,4
+real_dataset\cup\images - 2022-03-29T155402.719.jpg,cup,cup,0.9810724258422852,1
+real_dataset\cup\images - 2022-03-29T155402.785.jpg,cup,cup,0.9912096261978149,1
+real_dataset\cup\images - 2022-03-29T155402.798.jpg,cup,cup,0.9940502047538757,1
+real_dataset\cup\images - 2022-03-29T155402.808.jpg,cup,cup,0.990753173828125,1
+real_dataset\cup\images - 2022-03-29T160313.617.jpg,cup,cup,0.995566189289093,1
+real_dataset\cup\images - 2022-03-29T160313.640.jpg,cup,cup,0.9926142692565918,1
+real_dataset\cup\images - 2022-03-29T160531.777.jpg,cup,cup,0.9945241212844849,1
+real_dataset\cup\images - 2022-03-29T160531.873.jpg,cup,cup,0.9967824220657349,1
+real_dataset\cup\images - 2022-03-29T160935.663.jpg,cup,cup,0.9914905428886414,1
+real_dataset\cup\images - 2022-03-29T160935.671.jpg,cup,cup,0.9807590842247009,1
+real_dataset\cup\images - 2022-03-29T160935.672.jpg,cup,cup,0.9954659938812256,1
+real_dataset\cup\images - 2022-03-29T160935.674.jpg,cup,cup,0.994314968585968,1
+real_dataset\cup\images - 2022-03-29T160935.694.jpg,cup,cup,0.9695205688476562,1
+real_dataset\cup\images - 2022-03-29T160935.696.jpg,cup,cup,0.9916390776634216,1
+real_dataset\cup\images - 2022-03-29T160935.704.jpg,cup,cup,0.9952451586723328,1
+real_dataset\cup\images - 2022-03-29T160935.706.jpg,cup,cup,0.9907584190368652,1
+real_dataset\cup\images - 2022-03-29T160935.711.jpg,cup,cup,0.9926142692565918,1
+real_dataset\cup\images - 2022-03-29T161002.591.jpg,cup,cup,0.9914905428886414,1
+real_dataset\cup\images - 2022-03-29T161002.598.jpg,cup,cup,0.9952343106269836,1
+real_dataset\cup\images - 2022-03-29T161002.609.jpg,cup,cup,0.9950100183486938,1
+real_dataset\cup\images - 2022-03-29T161002.615.jpg,cup,cup,0.9960576295852661,1
+real_dataset\cup\images - 2022-03-29T161048.513.jpg,cup,cup,0.9954659938812256,1
+real_dataset\cup\images - 2022-03-29T161048.514.jpg,cup,cup,0.9954079985618591,1
+real_dataset\cup\images - 2022-03-29T161048.515.jpg,cup,cup,0.994314968585968,1
+real_dataset\cup\images - 2022-03-29T161200.61877.jpg,cup,cup,0.9946421384811401,1
+real_dataset\cup\images - 2022-03-29T161200.712.jpg,cup,cup,0.9952451586723328,1
+real_dataset\cup\images - 2022-03-29T161200.770.jpg,cup,cup,0.9955527186393738,1
+real_dataset\cup\images - 2022-03-29T161200.771.jpg,cup,cup,0.9935517311096191,1
+real_dataset\cup\images - 2022-03-29T161200.799.jpg,cup,cup,0.9945501685142517,1
+real_dataset\cup\images - 2022-03-29T161200.802.jpg,cup,cup,0.9901669025421143,1
+real_dataset\cup\images - 2022-03-29T161200.803.jpg,cup,cup,0.9911084175109863,1
+real_dataset\cup\images - 2022-03-29T161200.816.jpg,cup,cup,0.9860959649085999,1
+real_dataset\cup\images - 2022-03-29T161200.817.jpg,cup,cup,0.9937258362770081,1
+real_dataset\cup\images - 2022-03-29T161200.820.jpg,cup,cup,0.9933586716651917,1
+real_dataset\cup\images - 2022-03-29T161200.821.jpg,cup,cup,0.9853150844573975,1
+real_dataset\cup\images - 2022-03-29T161200.997.jpg,cup,cup,0.9950862526893616,1
+real_dataset\cup\images - 2022-03-29T161201.004.jpg,cup,cup,0.993408203125,1
+real_dataset\cup\images - 2022-03-29T161201.005.jpg,cup,cup,0.9926639795303345,1
+real_dataset\cup\images - 2022-03-29T161201.020.jpg,cup,cup,0.9917710423469543,1
+real_dataset\cup\images - 2022-03-29T161201.033.jpg,cup,cup,0.9934725761413574,1
+real_dataset\cup\images - 2022-03-29T161201.035.jpg,cup,cup,0.9914217591285706,1
+real_dataset\cup\images - 2022-03-29T161201.037.jpg,cup,cup,0.9860615730285645,1
+real_dataset\cup\images - 2022-03-29T161629.240.jpg,cup,cup,0.9912095069885254,1
+real_dataset\cup\images - 2022-03-29T161629.264.jpg,cup,cup,0.818500816822052,1
+real_dataset\cup\images - 2022-03-29T161629.265.jpg,cup,cup,0.98800128698349,1
+real_dataset\cup\images - 2022-03-29T161629.266.jpg,cup,cup,0.9856385588645935,1
+real_dataset\cup\images - 2022-03-29T161629.267.jpg,cup,cup,0.9947566986083984,1
+real_dataset\cup\images - 2022-03-29T161629.268.jpg,cup,cup,0.9929018616676331,1
+real_dataset\cup\images - 2022-03-29T161629.270.jpg,cup,cup,0.9943020343780518,1
+real_dataset\cup\images - 2022-03-29T161629.312.jpg,cup,cup,0.9942229390144348,1
+real_dataset\cup\images - 2022-03-29T161629.314.jpg,cup,cup,0.9946750402450562,1
+real_dataset\cup\images - 2022-03-29T161629.320.jpg,cup,cup,0.9891680479049683,1
+real_dataset\cup\images - 2022-03-29T161629.321.jpg,cup,cup,0.9931182861328125,1
+real_dataset\cup\images - 2022-03-29T161629.324.jpg,cup,cup,0.9878755211830139,1
+real_dataset\cup\images - 2022-03-29T161629.328.jpg,cup,cup,0.9816308617591858,1
+real_dataset\cup\images - 2022-03-29T161629.336.jpg,cup,cup,0.992466390132904,1
+real_dataset\cup\images - 2022-03-29T161629.338.jpg,cup,cup,0.994792640209198,1
+real_dataset\cup\images - 2022-03-29T161629.358.jpg,cup,cup,0.9893096685409546,1
+real_dataset\cup\images - 2022-03-29T161629.359.jpg,cup,cup,0.9922572374343872,1
+real_dataset\cup\images - 2022-03-29T161629.367.jpg,cup,cup,0.991193950176239,1
+real_dataset\cup\images - 2022-03-29T161629.577.jpg,cup,cup,0.9954659938812256,1
+real_dataset\laptop\UKZKSU5OCH0X.jpg,laptop,laptop,0.9958875775337219,3
+real_dataset\laptop\US5K8X31N9TL.jpg,laptop,laptop,0.9903061389923096,3
+real_dataset\laptop\UY031CJ8GLH6.jpg,laptop,laptop,0.9938734769821167,3
+real_dataset\laptop\V1LOH3907D23.jpg,laptop,laptop,0.9955697655677795,3
+real_dataset\laptop\V47UTB17KJ9Q.jpg,laptop,laptop,0.9943086504936218,3
+real_dataset\laptop\V52S96V58TZL.jpg,laptop,laptop,0.995572566986084,3
+real_dataset\laptop\VROS5F0LZ7IS.jpg,laptop,laptop,0.9956130981445312,3
+real_dataset\laptop\VTVGGVU4K02H.jpg,laptop,laptop,0.9966802597045898,3
+real_dataset\laptop\VWPO0E233SG0.jpg,laptop,laptop,0.9949507713317871,3
+real_dataset\laptop\W43L1M9ANKE9.jpg,laptop,laptop,0.9933770298957825,3
+real_dataset\laptop\W4JMTUEAE5DC.jpg,laptop,laptop,0.9956575632095337,3
+real_dataset\laptop\WB635W73N5YS.jpg,laptop,laptop,0.9938458800315857,3
+real_dataset\laptop\WBGNAPDSGED9.jpg,laptop,laptop,0.9963617920875549,3
+real_dataset\laptop\WELR4C2ES4QE.jpg,laptop,laptop,0.9861728549003601,3
+real_dataset\laptop\WK3YTRCAORKA.jpg,laptop,laptop,0.9950934648513794,3
+real_dataset\laptop\WWHQ789WEF9A.jpg,laptop,laptop,0.9922037124633789,3
+real_dataset\laptop\X0KNI88I78II.jpg,laptop,laptop,0.9939278364181519,3
+real_dataset\laptop\X8MJSURKMMUT.jpg,laptop,laptop,0.9916386008262634,3
+real_dataset\laptop\XFRMNWZEKV46.jpg,laptop,laptop,0.9948474168777466,3
+real_dataset\laptop\XG9FTEVJ1N5V.jpg,laptop,laptop,0.9944283962249756,3
+real_dataset\laptop\XHV2ASMGCQQB.jpg,laptop,laptop,0.9969197511672974,3
+real_dataset\laptop\Y0DC3IFBA6OW.jpg,laptop,laptop,0.9934171438217163,3
+real_dataset\laptop\YB4RXOW14UPN.jpg,laptop,laptop,0.9897661805152893,3
+real_dataset\laptop\YELVQJ0ZOAQW.jpg,laptop,laptop,0.9963087439537048,3
+real_dataset\laptop\YM0GFCZ6I93W.jpg,laptop,laptop,0.9958440661430359,3
+real_dataset\laptop\YMDKIL60D1TB.jpg,laptop,laptop,0.9925521612167358,3
+real_dataset\laptop\YRFO8HA7EK7O.jpg,laptop,laptop,0.9891862273216248,3
+real_dataset\laptop\YSTQ979NUZ66.jpg,laptop,laptop,0.9945113658905029,3
+real_dataset\laptop\ZMNC1DO4Y2MQ.jpg,laptop,laptop,0.9960380792617798,3
+real_dataset\laptop\ZPUODMEEP7M5.jpg,laptop,laptop,0.9928315877914429,3
