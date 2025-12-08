@@ -1,0 +1,222 @@
+
+# **YOLO Evaluation Documentation**
+
+This document explains how to run inference and compute evaluation metrics using the scripts located in:
+
+```
+3. Test & Results/Testing/
+```
+
+These scripts evaluate a YOLOv8 model on a folder-structured real dataset and generate per-image predictions, per-class metrics, a confusion matrix, and a summary JSON file.
+
+---
+
+# **1. Files & Their Roles**
+
+| Script               | Purpose                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| **SOTA_test.py**     | Evaluates the *Pure SOTA Model* (COCO-pretrained YOLO, e.g., `yolov8n.pt`).             |
+| **TRAINING_test.py** | Evaluates the *Trained Model* (`TrainedModel.pt`) produced from your training notebook. |
+
+**Dataset Format Required**
+
+```
+real_dataset/
+    book/
+    bottle/
+    chair/
+    cup/
+    laptop/
+```
+
+---
+
+# **2. Requirements**
+
+## **2.1 Python Environment**
+
+```bash
+python -m venv .venv
+```
+
+Activate:
+
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+**Mac/Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+## **2.2 Install Dependencies**
+
+```bash
+pip install ultralytics pandas plotly scikit-learn tqdm numpy pillow
+```
+
+(Optional PNG export)
+
+```bash
+pip install -U kaleido
+```
+
+---
+
+# **3. Script Configuration Overview**
+
+Both `SOTA_test.py` and `TRAINING_test.py` expose similar configuration variables or CLI flags.
+
+### **Common Parameters**
+
+| Parameter  | Meaning                                                           |
+| ---------- | ----------------------------------------------------------------- |
+| `--model`  | Path to the `.pt` model file (`yolov8n.pt` or `TrainedModel.pt`). |
+| `--data`   | Path to the folder-structured real dataset.                       |
+| `--out`    | Output directory for metrics.                                     |
+| `--device` | `"cpu"` or GPU id (`"0"`).                                        |
+| `--conf`   | Detection confidence threshold (default 0.25).                    |
+| `--imgsz`  | Inference resolution (recommended: 512).                          |
+| `--batch`  | Prediction batch size.                                            |
+
+### **Script Defaults (from your code)**
+
+#### **SOTA_test.py**
+
+* `model` default → `"yolov8n.pt"`
+* `data` default → `"real_dataset"`
+* `out` default → `"SOTA_eval_results"`
+
+#### **TRAINING_test.py**
+
+* Uses:
+
+  ```
+  MODEL_PATH = "TrainedModel.pt"
+  REAL_DATASET_ROOT = "real_dataset"
+  OUT_DIR = "Training_eval_results"
+  ```
+
+---
+
+# **4. Running the Scripts**
+
+## **4.1 Evaluate Pure SOTA Model**
+
+Runs detection using official YOLO weights (baseline).
+
+From repo root:
+
+```bash
+python "3. Test & Results/Testing/SOTA_test.py"
+```
+
+Or manually specify:
+
+```bash
+python "3. Test & Results/Testing/SOTA_test.py" \
+  --model yolov8n.pt \
+  --data "3. Test & Results/Testing/real_dataset" \
+  --out "3. Test & Results/Testing/SOTA_eval_results" \
+  --device cpu \
+  --imgsz 512
+```
+
+---
+
+## **4.2 Evaluate Your Trained Model**
+
+```bash
+python "3. Test & Results/Testing/TRAINING_test.py"
+```
+
+Or manually specify paths:
+
+```bash
+python "3. Test & Results/Testing/TRAINING_test.py" \
+  --model "3. Test & Results/Testing/TrainedModel.pt" \
+  --data "3. Test & Results/Testing/real_dataset" \
+  --out "3. Test & Results/Testing/Training_eval_results"
+```
+
+---
+
+# **5. Output Files**
+
+Each script produces an output folder:
+
+```
+SOTA_eval_results/                # for SOTA_test.py
+Training_eval_results/            # for TRAINING_test.py
+```
+
+Inside each folder:
+
+| File                      | Description                                                                                           |
+| ------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **results.csv**           | Per-image predictions with columns: `image`, `gt_label`, `pred_label`, `pred_score`, `pred_class_id`. |
+| **per_class_metrics.csv** | Precision, recall, F1, support for each class.                                                        |
+| **confusion_matrix.html** | Interactive Plotly heatmap (ground truth rows × predicted columns).                                   |
+| **summary.json**          | Overall accuracy, number of images, and per-class metrics.                                            |
+
+---
+
+# **6. Label Mapping Logic**
+
+Your scripts implement robust class-name mapping using:
+
+* Folder names (used as ground-truth labels).
+* `model.names` (Ultralytics mapping).
+* Case-insensitive matching.
+* Numeric fallback mapping.
+
+If a prediction cannot be mapped:
+
+* It is assigned to `"none"` (treated as no detection).
+* Appears in the final column of the confusion matrix.
+
+---
+
+# **7. Troubleshooting**
+
+**1. Many “none” predictions**
+Try:
+
+* Lower confidence: `--conf 0.2`
+* Increase resolution: `--imgsz 640`
+
+**2. No images detected**
+
+* Ensure dataset folder matches required structure.
+* Confirm file extensions (`.jpg`, `.jpeg`, `.png`, `.tif`, `.bmp`, `.webp`).
+
+**3. Model not loading**
+
+* Ensure path is correct:
+  `3. Test & Results/Testing/TrainedModel.pt`
+* Using `"yolov8n.pt"` automatically downloads pretrained weights if missing.
+
+**4. HTML confusion matrix won't open**
+
+* Open with browser:
+
+  ```
+  Training_eval_results/confusion_matrix.html
+  ```
+
+---
+
+# **8. Summary**
+
+| Model Type                | Script             | Evaluate Using    |
+| ------------------------- | ------------------ | ----------------- |
+| **Pure SOTA (Baseline)**  | `SOTA_test.py`     | `yolov8n.pt`      |
+| **Your Fine-tuned Model** | `TRAINING_test.py` | `TrainedModel.pt` |
+
+Both scripts generate identical evaluation artifacts and follow the same pipeline.
+
+
