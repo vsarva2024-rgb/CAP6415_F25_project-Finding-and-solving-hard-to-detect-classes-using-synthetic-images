@@ -1,0 +1,248 @@
+# **Unity Perception Pipeline Documentation**
+
+This document describes the Unity-side pipeline used to generate synthetic datasets for the project *Training a Large Model Using Unity Perception Images*.
+It covers the scene setup, Perception labelers, randomizers, and the data-export workflow.
+
+---
+
+# **1. Unity Version & Packages**
+
+* **Unity Version:** 2022.3 LTS
+* **Packages:**
+
+  * `com.unity.perception`
+* **Scene Used:**
+
+  ```
+  Assets/Scenes/SyntheticDataScene.unity
+  ```
+* **Render Pipeline:** Built-in Render Pipeline
+
+---
+
+# **2. Scene Structure**
+
+The dataset is generated using a Perception **FixedLengthScenario**, configured to produce a fixed number of images.
+
+## **Scene Objects**
+
+### **Scenario (FixedLengthScenario)**
+
+* Controls total number of generated frames.
+* Invokes Perception iteration events each frame.
+
+### **Main Camera**
+
+* Resolution: **1024 × 1024**
+* Perception labelers attached:
+
+  * `BoundingBox2DLabeler`
+  * `RenderedObjectInfoLabeler`
+
+### **Randomizers Attached to Scenario**
+
+Only two randomizers are used:
+
+1. **PrefabPlacementRandomizer**
+   Spawns a single random book prefab for each iteration.
+
+2. **RotationRandomizer**
+   Applies random rotation to the spawned prefab.
+
+All lighting, camera-position, and environmental randomizers have been removed for a clean, controlled dataset.
+
+---
+
+# **3. Randomizers**
+
+## **3.1 PrefabPlacementRandomizer**
+
+Responsible for:
+
+* Random prefab choice
+* Random spawn position
+* Optional deterministic seeding
+* Automatic cleanup of the spawned instance
+
+```csharp
+using UnityEngine;
+using UnityEngine.Perception.Randomization.Parameters;
+using UnityEngine.Perception.Randomization.Randomizers;
+
+[System.Serializable]
+[AddRandomizerMenu("Perception/Prefab Placement Randomizer")]
+public class PrefabPlacementRandomizer : Randomizer
+{
+    public Vector3Parameter placementLocation;
+    public GameObject[] prefabParameter;
+
+    [Header("Deterministic Seeding (Optional)")]
+    public bool useSeed = false;
+    public int seed = 1234;
+
+    GameObject instance;
+
+    protected override void OnScenarioStart()
+    {
+        if (useSeed)
+            Random.InitState(seed);
+    }
+
+    protected override void OnIterationStart()
+    {
+        int index = Random.Range(0, prefabParameter.Length);
+        instance = Object.Instantiate(prefabParameter[index]);
+        instance.transform.position = placementLocation.Sample();
+    }
+
+    protected override void OnIterationEnd()
+    {
+        if (instance != null)
+            GameObject.Destroy(instance);
+    }
+}
+```
+
+---
+
+## **3.2 RotationRandomizer**
+
+Applies random Euler rotation to the prefab each iteration.
+
+```csharp
+using UnityEngine;
+using UnityEngine.Perception.Randomization.Parameters;
+using UnityEngine.Perception.Randomization.Randomizers;
+
+[System.Serializable]
+[AddRandomizerMenu("Perception/Rotation Randomizer")]
+public class RotationRandomizer : Randomizer
+{
+    public Vector3Parameter prefabRotation;
+
+    protected override void OnIterationStart()
+    {
+        foreach (var tagged in taggedObjects)
+            tagged.transform.rotation = Quaternion.Euler(prefabRotation.Sample());
+    }
+}
+```
+
+---
+
+# **4. Dataset Generation Workflow**
+
+### **Step 1 — Open the Project**
+
+```
+File → Open Project → unity_project/
+```
+
+### **Step 2 — Load the Scene**
+
+```
+Assets/Scenes/SyntheticDataScene.unity
+```
+
+### **Step 3 — Configure the Scenario**
+
+* Set `FixedLengthScenario.frameCount` to the desired image count (e.g., 100).
+* Assign all book prefabs:
+
+  ```
+  Assets/3dModel/book1.prefab
+  …
+  Assets/3dModel/book9.prefab
+  ```
+* Configure parameter ranges for:
+
+  * `placementLocation`
+  * `prefabRotation`
+* Enable `useSeed` for deterministic reproduction if required.
+
+### **Step 4 — Run the Capture**
+
+Press **Play**.
+Unity generates images and JSON metadata under:
+
+```
+unity_project/GeneratedDataset/
+```
+
+Inside each sequence:
+
+* `step0.camera.png`
+* `step0.frame_data.json`
+
+---
+
+# **5. Converting Perception Output to YOLO Format**
+
+The converter used is:
+
+```
+Perception2YOLO
+```
+
+Running the converter produces:
+
+```
+GeneratedDataset/YOLO/
+   images/train/
+   images/val/
+   labels/train/
+   labels/val/
+   dataset.yaml
+```
+
+The script:
+
+* Reads each Perception JSON
+* Extracts 2D bounding boxes
+* Normalizes YOLO coordinates
+  `class x_center y_center width height`
+* Splits into training/validation sets
+
+---
+
+# **6. Reproducibility Notes**
+
+* Enabling `useSeed` makes synthetic data generation deterministic.
+* With `useSeed` disabled, the dataset varies each run, ensuring no two users generate the same images.
+* Bounding box JSON data follows Unity Perception's deterministic internal logic.
+* Output image resolution is always **1024 × 1024**.
+* Each image `N.png` has a corresponding YOLO label `N.txt`.
+
+---
+
+# **7. Output Format Summary**
+
+### **Image files**
+
+```
+0.png, 1.png, 2.png, ...
+```
+
+### **Label files**
+
+```
+0.txt, 1.txt, 2.txt, ...
+```
+
+### **YOLO Format**
+
+```
+class_id x_center y_center width height
+```
+
+### **YOLO Dataset Structure**
+
+```
+YOLO/
+   images/train/
+   images/val/
+   labels/train/
+   labels/val/
+   dataset.yaml
+```
+
